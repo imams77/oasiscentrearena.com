@@ -1,0 +1,82 @@
+@font-face{
+  font-family: 'PopplOneBQ-Regular';
+  src: url('fonts/PopplCollege One BQ Regular.woff')
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat'
+}
+.under-construction{
+  background-image: url('./images/Artboard 7.png');
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* padding: 20px 0 */
+}
+.header{
+  padding: 10px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center
+}
+.header .logo{
+  width: 200px
+}
+.text{
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+.text > div {
+  width: 100%
+}
+h6{
+  letter-spacing: 10px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  color: white
+}
+.header h6{
+  font-family: 'PopplOneBQ-Regular';
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.header .header-separator{
+  height: 70px;
+  width: 2px;
+  margin: 0 30px 0 20px;
+  background-color: white
+}
+.text img{
+  max-width: 95vw
+}
+.align-left{
+  text-align: left
+}
+.align-center{
+  text-align: center
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  color: white;
+  /* position: absolute; */
+  /* bottom: 20px; */
+  font-size: 12px;
+  width: 100%;
+}
+.footer span{
+  margin-left: 10px
+}
+.footer span i{
+  margin-right: 10px
+}
