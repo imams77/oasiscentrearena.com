@@ -11,7 +11,7 @@ body{
 .under-construction{
   background-image: url('./images/Artboard 7.png');
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -54,7 +54,7 @@ h6{
   background-color: white
 }
 .text img{
-  max-width: 95vw
+  max-width: 100%
 }
 .align-left{
   text-align: left
@@ -77,6 +77,17 @@ h6{
 .footer span{
   margin-left: 10px
 }
-.footer span i{
-  margin-right: 10px
+.footer .address span{
+  margin: 0
+}
+.footer span > i {
+  margin-right: 5px
+}
+.footer .address span::after{
+  content: '|';
+  margin: 0 5px;
+  position: relative;
+}
+.footer .address span:last-child::after{
+  content: ''
 }
