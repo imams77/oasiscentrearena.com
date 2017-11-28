@@ -6,10 +6,10 @@
     margin-left: 0;
     margin-bottom: 5px
   }
-  .text h6{
+  .text h1{
     letter-spacing: 4px
   }
-  .text div h6{
+  .text div h1{
     text-align: center
   }
 }
@@ -35,7 +35,14 @@
   .header *{
     text-align: center
   }
+  h1{
+    margin: 5px 0;
+    font-size: 12px !important;
+  }
+  .header .logo{
+    width: 100px
+  }
   .header .header-separator{
-    transform: rotate(90deg)
+    display: none
   }
 }
