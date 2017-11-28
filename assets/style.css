@@ -90,5 +90,6 @@ h1{
   position: relative;
 }
 .footer .address span:last-child::after{
-  content: ''
+  content: '';
+  display: none;
 }
