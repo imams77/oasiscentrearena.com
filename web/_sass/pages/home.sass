@@ -1,0 +1,214 @@
+.sport-section
+  position: relative
+  min-height: 500px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 30px
+  &.active > *
+    opacity: 1
+    &:first-child, &:last-child
+      transform: translateX(0px)
+  > *
+    opacity: 0
+    transition: all ease-in-out 0.3s
+    &:first-child
+      transform: translateX(-50px)
+    &:last-child
+      transform: translateX(50px)
+  .sport-content
+    position: relative
+    .sport-title
+      font-weight: 800
+      font-style: italic
+      position: relative
+      font-size: 60px
+      margin-bottom: 10px
+      span
+        display: block
+        line-height: 55px
+        letter-spacing: 1px
+        margin: 0
+    .sport-description
+      font-size: 12px
+      line-height: 25px
+      font-weight: 400
+  .sport-image img
+    max-width: 900px
+  &#sport-figure-skating
+    .sport-content
+      .sport-title
+        text-align: right
+        span
+          display: block
+          line-height: 60px
+          margin: 0
+          &:first-child
+            transform: translateX(40px)
+          &:last-child
+            transform: translateX(-20px)
+      .sport-description
+        text-align: right
+    .sport-image
+      position: absolute
+      right: 100px
+      top: -30px
+      display: block
+      width: 800px
+  &#sport-ice-hockey .sport-content .sport-title
+    text-align: left
+    span
+      &:first-child
+        transform: translateX(-40px)
+      &:last-child
+        transform: translateX(-20px)
+  &#sport-stss-skating
+    .sport-image img
+      transform: translateX(-300px)
+    .sport-content
+      .sport-title
+        text-align: left
+        margin-bottom: 20px
+        span
+          line-height: 40px
+          font-size: 60px
+          &:first-child
+            font-size: 30px
+            letter-spacing: 2px
+      .sport-description
+        text-align: right
+        padding-right: 80px
+
+#home-calendar
+  width: 100%
+  display: block
+  height: 300px
+  background-image: url("/assets/images/bg-home-calendar.png")
+  background-size: cover
+  padding: 20px
+  &.active > .container > .row > *
+    opacity: 1
+    transform: translateY(0) !important
+    transition: all ease-in-out 0.2s
+  > .container
+    height: 100%
+    padding-left: 50px
+    > .row
+      height: 100%
+      padding-left: 120px
+      >
+        *
+          opacity: 0
+        .triangle-down
+          transform: translateY(-40px)
+        .triangle-up
+          transform: translateY(40px)
+  .visit-container
+    height: 100%
+    display: flex
+    width: 250px
+    position: relative
+    z-index: 1
+    padding: 20px 20px 20px 25px
+    justify-content: center
+    flex-direction: column
+    h6
+      color: white
+      transform: translateX(-20px)
+      margin-bottom: 20px
+    .visit-menu
+      padding: 0
+      li
+        display: flex
+        align-items: flex-start
+        justify-content: flex-start
+        padding: 0
+        list-style: none
+        margin-bottom: 10px
+        &:hover
+          > svg, a
+            color: #06C0C9
+        > svg
+          font-size: 10px
+          color: white
+          transform: translateX(-20px)
+          display: inline-block
+        a
+          color: white
+          font-size: 10px
+          font-family: "Open Sans"
+          letter-spacing: 1px
+          line-height: 12px
+    &:before
+      z-index: -1
+      position: absolute
+      height: 100%
+      content: ""
+      width: 100%
+      top: 0
+      left: 0
+      transform: skew(30deg)
+      background-color: rgba(3, 98, 114, 0.9)
+  .calendar-container
+    width: 0
+    height: 0
+    cursor: pointer
+    transition: all ease-in-out 0.15s
+    &.first-child
+      left: -40px
+    &.second-child
+      margin-left: -140px
+    &.third-child
+      left: -95px
+    &.triangle-down
+      border-left: 140px solid transparent
+      border-right: 140px solid transparent
+      border-top: 250px solid rgba(15, 180, 207, 0.9)
+      position: relative
+      &:hover
+        border-top: 250px solid rgba(3, 98, 114, 0.9)
+      .content
+        margin-top: -250px
+        .calendar
+          padding-top: 25px
+    &.triangle-up
+      border-left: 140px solid transparent
+      border-right: 140px solid transparent
+      border-bottom: 250px solid rgba(15, 180, 207, 0.9)
+      &:hover
+        border-bottom: 250px solid rgba(3, 98, 114, 0.9)
+    .content
+      .detail
+        font-size: 10px
+        line-height: 16px
+        display: flex
+        justify-content: center
+        letter-spacing: 1px
+        text-align: center
+        color: white
+        margin-top: 20px
+        width: 140px
+        margin-left: -70px
+      .calendar
+        font-size: 10px
+        color: white
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding-top: 80px
+        .month
+          letter-spacing: 4px
+          padding-bottom: 8px
+          display: inline-block
+          border-bottom: 2px solid white
+        .date
+          display: inline-block
+          font-size: 20px
+          font-weight: 700
+          letter-spacing: 2px
+          margin-top: 8px
+
+body
+  background-color: white
+  overflow-x: hidden
