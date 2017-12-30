@@ -86,10 +86,13 @@
   background-image: url("/assets/images/bg-home-calendar.png")
   background-size: cover
   padding: 20px
-  &.active > .container > .row > *
-    opacity: 1
-    transform: translateY(0) !important
-    transition: all ease-in-out 0.2s
+  &.active 
+    & > .container 
+      & > .row 
+        > *
+          opacity: 1
+          transform: translateY(0) translateX(0) !important
+          transition: opacity .6s ease-in-out, border .15s ease-in-out, transform .7s
   > .container
     height: 100%
     padding-left: 50px
@@ -106,12 +109,13 @@
   .visit-container
     height: 100%
     display: flex
-    width: 250px
+    width: $home-triangle-height
     position: relative
     z-index: 1
     padding: 20px 20px 20px 25px
     justify-content: center
     flex-direction: column
+    transform: translateX(-60px)
     h6
       color: white
       transform: translateX(-20px)
@@ -127,7 +131,7 @@
         margin-bottom: 10px
         &:hover
           > svg, a
-            color: #06C0C9
+            color: $color-primary
         > svg
           font-size: 10px
           color: white
@@ -148,7 +152,7 @@
       top: 0
       left: 0
       transform: skew(30deg)
-      background-color: rgba(3, 98, 114, 0.9)
+      background-color: $color-secondary-rgba
   .calendar-container
     width: 0
     height: 0
@@ -157,26 +161,26 @@
     &.first-child
       left: -40px
     &.second-child
-      margin-left: -140px
+      margin-left: - $home-triangle-width
     &.third-child
       left: -95px
     &.triangle-down
-      border-left: 140px solid transparent
-      border-right: 140px solid transparent
-      border-top: 250px solid rgba(15, 180, 207, 0.9)
+      border-left:  $home-triangle-width solid transparent
+      border-right:  $home-triangle-width solid transparent
+      border-top: $home-triangle-height solid $color-primary-rgba
       position: relative
       &:hover
-        border-top: 250px solid rgba(3, 98, 114, 0.9)
+        border-top: $home-triangle-height solid $color-secondary-rgba
       .content
-        margin-top: -250px
+        margin-top: -$home-triangle-height
         .calendar
           padding-top: 25px
     &.triangle-up
-      border-left: 140px solid transparent
-      border-right: 140px solid transparent
-      border-bottom: 250px solid rgba(15, 180, 207, 0.9)
+      border-left:  $home-triangle-width solid transparent
+      border-right:  $home-triangle-width solid transparent
+      border-bottom: $home-triangle-height solid $color-primary-rgba
       &:hover
-        border-bottom: 250px solid rgba(3, 98, 114, 0.9)
+        border-bottom: $home-triangle-height solid $color-secondary-rgba
     .content
       .detail
         font-size: 10px
@@ -187,7 +191,7 @@
         text-align: center
         color: white
         margin-top: 20px
-        width: 140px
+        width:  $home-triangle-width
         margin-left: -70px
       .calendar
         font-size: 10px
@@ -208,7 +212,3 @@
           font-weight: 700
           letter-spacing: 2px
           margin-top: 8px
-
-body
-  background-color: white
-  overflow-x: hidden

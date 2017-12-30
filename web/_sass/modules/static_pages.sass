@@ -1,8 +1,8 @@
 header, footer
   color: white
-  background-color: #231F20
+  background-color: $color-background-header
   #oca-navbar
-    background-color: #000000
+    background-color: $color-background-header
     color: white
     width: 100%
     height: 150px
@@ -15,12 +15,12 @@ header, footer
         justify-content: space-between
         height: 100%
         align-items: center
-    a
-      &.navbar-brand
-        padding: 0
-        margin: 0
-        img
-          height: 100px
+      a
+        &.navbar-brand
+          padding: 0
+          margin: 0
+          img
+            height: 100px
     .oca-menu
       display: inline-flex
       align-items: flex-end
@@ -77,15 +77,16 @@ header, footer
                   width: 100%
                   a
                     padding: 20px
-                    background-color: rgba(65, 64, 66, 0.9)
+                    background-color: $color-background-header-rgba
                     width: 100%
+                    &:after
+                      background-color: #808082
+                      left: 10px
+                      right: 10px
+                      height: 1px
                     &:hover
                       background-color: rgba(20, 20, 20, 0.7)
-                      &:after
-                        background-color: #808082
-                        left: 10px
-                        right: 10px
-                        height: 1px
+                      
             a
               i
                 position: absolute
@@ -177,7 +178,7 @@ footer
     display: flex
     justify-content: center
     align-items: center
-    background-color: #06C0C9
+    background-color: $color-primary
     span
       font-size: 16px
       color: white
