@@ -1,108 +1,55 @@
 ---
-layout: main
+layout: main-home
+title: Welcome to Oasiscentrearena
 ---
-<div class="container">
-  <div class="row">
-    <h1 class="page-title">THE SPORTS</h1>    
-    <div class="row sport-section" id="sport-figure-skating">
-      <div class="sport-content col-sm-6">
-        <div class="sport-title">
-          <span>FIGURE</span>
-          <span>SKATING</span>
-        </div>
-        <p class="sport-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At optio et architecto impedit minima consectetur magni pariatur eaque, ab, illo labore eligendi odit, eveniet non. Quos vel beatae nisi nostrum!</p>
-      </div>
-      <div class="sport-image col-sm-7">
-        <img src="/assets/images/fs.png" alt="">
-      </div>
-    </div>
-    <div class="row sport-section" id="sport-ice-hockey">
-      <div class="sport-image col-sm-8">
-        <img src="/assets/images/ih.png" alt="">
-      </div>
-      <div class="sport-content col-sm-3 col-sm-offset-1">
-        <div class="sport-title ">
-          <span>ICE</span>
-          <span>HOCKEY</span>
-        </div>
-        <p class="sport-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At optio et architecto impedit minima consectetur magni pariatur eaque, ab, illo labore eligendi odit, eveniet non. Quos vel beatae nisi nostrum!</p>
-      </div>
-      
-    </div>
-    <div class="row sport-section" id="sport-stss-skating">
-      <div class="sport-content col-sm-6">
-        <div class="sport-title">
-          <span>SHORT TRACK</span>
-          <span>SPEED SKATING</span>
-        </div>
-        <p class="sport-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At optio et architecto impedit minima consectetur magni pariatur eaque, ab, illo labore eligendi odit, eveniet non. Quos vel beatae nisi nostrum!</p>
-      </div>
-      <div class="sport-image col-sm-6">
-        <img src="/assets/images/stss.png" alt="">
-      </div>
-    </div>
+<div class="hero-video" id="home-video">
+  <span class="play-btn"><i class="fa fa-3x fa-caret-right"></i></span>
+  <div class="text">
+    <h5>EXPERIENCE</h5>
+    <h1>THE SPEED</h1>
   </div>
 </div>
-    
-  
-  
-  <div id="home-calendar">
-    <div class="container">
-      <div class="row">
-        <div class="visit-container">
-          <h6>VISIT <br> OASIS CENTRE ARENA</h6>
-          <ul class="visit-menu" >
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <a href="#"> LOREM IPSUM</a>
-            </li>
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <a href="#"> DOLOR SIT AMET</a>
-            </li>
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <a href="#"> CONSECTETUR ADIPISCING </a>
-            </li>
-            <li>
-              <i class="fas fa-chevron-right"></i>
-              <a href="#"> LOREM IPSUM <br> DOLOR SIT AMET</a>
-            </li>
-          </ul>
+<div class="container-fluid">
+  <div class="row">
+      <div class="slick">
+          <div><img src="/assets/images/home/home-slider.jpg" alt=""></div>
+          <div><img src="/assets/images/home/home-slider.jpg" alt=""></div>
+          <div><img src="/assets/images/home/home-slider.jpg" alt=""></div>
         </div>
-        <div class="calendar-container triangle-down first-child">
-          <div class="content">
-            <div class="calendar">
-              <span class="month">NOV</span>
-              <span class="date">30</span>
-            </div>
-            <p class="detail">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            </p>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    {% include footer-calendar.html %}
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row home-map-container">
+    <img src="/assets/images/home/home-map.jpg" alt="">
+  </div>
+</div>
+<div class="container oca-section">
+  <div class="row" id="contact-section">
+      <div class="flex center">
+        <h5 class="page-subtitle has-bottom-line">SIGN UP FOR THE NEWSLETTER</h5>
+      </div>
+      <div class="flex center vertical-center direction-column">
+        <form action="" id="contact-form">
+          <div class="oca-form-group">
+            <input type="text" class="oca-form oca-form-input form-control" placeholder="NAME">
           </div>
-        </div>
-        <div class="calendar-container triangle-up second-child">
-          <div class="content">
-            <div class="calendar">
-              <span class="month">NOV</span>
-              <span class="date">30</span>
-            </div>
-            <p class="detail">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            </p>
+          <div class="oca-form-group">
+            <input type="text" class="oca-form oca-form-input form-control" placeholder="EMAIL">
           </div>
-        </div>
-        <div class="calendar-container triangle-down third-child">
-          <div class="content">
-            <div class="calendar">
-              <span class="month">NOV</span>
-              <span class="date">30</span>
-            </div>
-            <p class="detail">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            </p>
+          <div class="flex center button-container">
+            <span class="oca-button default">SUBMIT</span>        
           </div>
-        </div>
+        </form>
       </div>
     </div>
-  </div>
+</div>
+<script>
+  // $(document).ready(() => {
+  $('header').addClass('fixed')
+  // })
+</script>

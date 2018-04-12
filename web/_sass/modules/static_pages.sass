@@ -10,7 +10,8 @@ header, footer
     & > .container
       height: 100%
       .navbar-container
-        display: flex
+        display: grid
+        grid-template-columns: 1fr 6fr
         position: relative
         justify-content: space-between
         height: 100%
@@ -27,6 +28,7 @@ header, footer
       height: 100%
       ul
         display: flex
+        padding: 0
         justify-content: space-around
         align-items: flex-end
         margin-bottom: 0
@@ -182,3 +184,147 @@ footer
     span
       font-size: 16px
       color: white
+
+#footer-calendar
+  width: 100%
+  display: block
+  height: 300px
+  background-image: url("/assets/images/bg-home-calendar.png")
+  background-size: cover
+  padding: 20px
+  &.active 
+    & > .container 
+      & > .row 
+        > *
+          opacity: 1
+          transform: translateY(0) translateX(0) !important
+          transition: opacity .6s ease-in-out, border .15s ease-in-out, transform .7s
+  > .container
+    height: 100%
+    padding-left: 50px
+    > .row
+      height: 100%
+      padding-left: 120px
+      >
+        *
+          opacity: 0
+        .triangle-down
+          transform: translateY(-40px)
+        .triangle-up
+          transform: translateY(40px)
+  .visit-container
+    height: 100%
+    display: flex
+    width: $home-triangle-height
+    position: relative
+    z-index: 1
+    padding: 20px 20px 20px 25px
+    justify-content: center
+    flex-direction: column
+    transform: translateX(-60px)
+    h6
+      color: white
+      transform: translateX(-20px)
+      margin-bottom: 20px
+    .visit-menu
+      padding: 0
+      li
+        display: flex
+        align-items: flex-start
+        justify-content: flex-start
+        padding: 0
+        list-style: none
+        margin-bottom: 10px
+        &:hover
+          > svg, a
+            color: $color-primary
+        > svg
+          font-size: 10px
+          color: white
+          transform: translateX(-20px)
+          display: inline-block
+        a
+          color: white
+          font-size: 10px
+          font-family: "Open Sans"
+          letter-spacing: 1px
+          line-height: 12px
+    &:before
+      z-index: -1
+      position: absolute
+      height: 100%
+      content: ""
+      width: 100%
+      top: 0
+      left: 0
+      transform: skew(30deg)
+      background-color: $color-secondary-rgba
+  .calendar-container
+    width: 0
+    height: 0
+    cursor: pointer
+    transition: all ease-in-out 0.15s
+    &.first-child
+      left: -40px
+    &.second-child
+      margin-left: - $home-triangle-width
+    &.third-child
+      left: -95px
+    &.triangle-down
+      border-left:  $home-triangle-width solid transparent
+      border-right:  $home-triangle-width solid transparent
+      border-top: $home-triangle-height solid $color-primary-rgba
+      position: relative
+      &:hover
+        border-top: $home-triangle-height solid $color-secondary-rgba
+      .content
+        margin-top: -$home-triangle-height
+        .calendar
+          padding-top: 25px
+    &.triangle-up
+      border-left:  $home-triangle-width solid transparent
+      border-right:  $home-triangle-width solid transparent
+      border-bottom: $home-triangle-height solid $color-primary-rgba
+      &:hover
+        border-bottom: $home-triangle-height solid $color-secondary-rgba
+    .content
+      .detail
+        font-size: 10px
+        line-height: 16px
+        display: flex
+        justify-content: center
+        letter-spacing: 1px
+        text-align: center
+        color: white
+        margin-top: 20px
+        width:  $home-triangle-width
+        margin-left: -70px
+      .calendar
+        font-size: 10px
+        color: white
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding-top: 80px
+        .month
+          letter-spacing: 4px
+          padding-bottom: 8px
+          display: inline-block
+          border-bottom: 2px solid white
+        .date
+          display: inline-block
+          font-size: 20px
+          font-weight: 700
+          letter-spacing: 2px
+          margin-top: 8px
+
+header.fixed
+  z-index: 5
+  position: fixed
+  width: 100%
+  transition: all ease-in-out .2s
+  transform: translateY(-100%)
+  &.active
+    transform: translateY(0)
+

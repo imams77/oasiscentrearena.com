@@ -1,1 +1,78 @@
 @import "static_pages"
+@import "buttons"
+body
+  font-size: 12px
+.flex
+  display: flex
+  width: 100%
+  &.center
+    justify-content: center
+  &.vertical-center
+    align-items: center
+  &.direction-column
+    flex-direction: column
+.has-bottom-line
+  position: relative
+  padding-bottom: 30px
+  &:after
+    position: absolute
+    width: 30%
+    height: 3px
+    background-color: black
+    content: ''
+    left: 35%
+    bottom: 15px
+
+.section-title
+  font-size: 20px
+  margin: 15px 0
+// input
+.oca-form-group
+  position: relative
+  &:after
+    background-color: $background-form-input
+    content: ''
+    cursor: text
+    opacity: .3
+    width: 100%
+    height: 100%
+    position: absolute
+    bottom: 0
+    top: 0
+    pointer-events: none
+.oca-form
+  margin: 10px 0
+  &.oca-form-input
+    text-align: center
+
+.hero-image
+  height: 100vh
+  width: 100vw
+  background-size: cover
+  background-position: top
+  background-repeat: no-repeat
+
+.page-title
+  &.with-background
+    background-image: url('/assets/images/page-title.png')
+    background-size: 100% 100%
+    background-position: top left
+    padding: 40px 30px 40px 20px
+    font-size: 18px
+    color: white
+
+.no-padding
+  padding: 0
+p
+  line-height: 25px
+
+.oca-section
+  padding: 50px 0
+  &.no-padding
+    padding: 0
+
+.slick
+  width: 100%
+  z-index: 1
+  img
+    width: inherit
