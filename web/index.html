@@ -11,21 +11,127 @@ title: Welcome to Oasiscentrearena
 </div>
 <div class="container-fluid">
   <div class="row">
-      <div class="slick">
-          <div><img src="/assets/images/home/home-slider.jpg" alt=""></div>
-          <div><img src="/assets/images/home/home-slider.jpg" alt=""></div>
-          <div><img src="/assets/images/home/home-slider.jpg" alt=""></div>
-        </div>
+    <div class="col-sm-12 slideshow-container">
+      <div class="slideshow row">
+        <div class="slide"><img src="/assets/images/home/home-slider.jpg" alt=""></div>
+        <div class="slide"><img src="/assets/images/home/home-slider.jpg" alt=""></div>
+        <div class="slide"><img src="/assets/images/home/home-slider.jpg" alt=""></div>
+      </div>
+      <div class="dots-container"></div>
+    </div>
   </div>
 </div>
 <div class="container-fluid">
   <div class="row">
-    {% include footer-calendar.html %}
+    <div id="footer-calendar">
+      <div class="container">
+        <div class="row first-row">
+          <div class="visit-container">
+            <h6>VISIT <br> OASIS CENTRE ARENA</h6>
+            <ul class="visit-menu" >
+              <li>
+                <i class="fas fa-chevron-right"></i>
+                <a href="#"> LOREM IPSUM</a>
+              </li>
+              <li>
+                <i class="fas fa-chevron-right"></i>
+                <a href="#"> DOLOR SIT AMET</a>
+              </li>
+              <li>
+                <i class="fas fa-chevron-right"></i>
+                <a href="#"> CONSECTETUR ADIPISCING </a>
+              </li>
+              <li>
+                <i class="fas fa-chevron-right"></i>
+                <a href="#"> LOREM IPSUM <br> DOLOR SIT AMET</a>
+              </li>
+            </ul>
+          </div>
+          <div class="calendar-container triangle-down first-child">
+            <div class="content">
+              <div class="calendar">
+                <span class="month">NOV</span>
+                <span class="date">30</span>
+              </div>
+              <p class="detail">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="calendar-container triangle-up second-child">
+            <div class="content">
+              <div class="calendar">
+                <span class="month">NOV</span>
+                <span class="date">30</span>
+              </div>
+              <p class="detail">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="calendar-container triangle-down third-child">
+            <div class="content">
+              <div class="calendar">
+                <span class="month">NOV</span>
+                <span class="date">30</span>
+              </div>
+              <p class="detail">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row second-row">
+          <div class="calendar-container triangle-down first-child">
+            <div class="content">
+              <div class="calendar">
+                <span class="month">NOV</span>
+                <span class="date">30</span>
+              </div>
+              <p class="detail">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="calendar-container triangle-up second-child">
+            <div class="content">
+              <div class="calendar">
+                <span class="month">NOV</span>
+                <span class="date">30</span>
+              </div>
+              <p class="detail">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="calendar-container triangle-down third-child">
+            <div class="content">
+              <div class="calendar">
+                <span class="month">NOV</span>
+                <span class="date">30</span>
+              </div>
+              <p class="detail">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <div class="container-fluid">
   <div class="row home-map-container">
-    <img src="/assets/images/home/home-map.jpg" alt="">
+    <div id="oca-map-container">
+      <div id="oca-map"></div>
+      <div class="map-caption">
+        <div class="caption-content color-white">
+          <div class="title">LOREM IPSUM</div>
+          <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas debitis sequi.</p>
+          <span class="oca-button btn-transparent">READ MORE</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <div class="container oca-section">
@@ -50,6 +156,11 @@ title: Welcome to Oasiscentrearena
 </div>
 <script>
   // $(document).ready(() => {
-  $('header').addClass('fixed')
+  //   $('header').addClass('fixed')
+  //   setHeroVideoTextPosition(windowHeight)
+  // })
+  // $(window).resize(() => {
+  //   windowHeight = window.innerHeight
+  //   setHeroVideoTextPosition(windowHeight)
   // })
 </script>

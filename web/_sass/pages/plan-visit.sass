@@ -1,0 +1,57 @@
+#plan-visit
+  #visit-getting-here
+    padding: 50px 0
+    background-color: #eee
+  #visit-direction
+    padding: 50px 0
+    .getting-here
+      li
+        &.active
+          > .row > div
+            opacity: 1
+            transform: translateX(0)
+        > .row > div
+          +flex-box(center, flex-start, column)
+          opacity: 0
+          &:first-child
+            transform: translateX(-30px)
+            transition: all ease-in-out .2s
+          &:last-child
+            transform: translateX(30px)
+            transition: all .2s ease-in-out .2s
+  #visit-socmed
+    position: relative
+    background-color: $color-secondary-rgba
+    padding: 50px 0
+    &:after
+      content: ''
+      background-image: url('/assets/images/bg-wrapper-2.png')
+      position: absolute
+      background-size: cover
+      background-position: top left
+      left: 0
+      top: 0
+      width: 0
+      height: 100%
+  .getting-here
+    list-style: none
+    padding: 0
+    width: 100%
+    li
+      padding: 0
+      margin: 40px 0
+      background-color: rgba(255, 255, 255, .6)
+      .row
+        > div
+          padding: 40px
+          .title
+            font-size: 20px
+            color: $color-cerulean
+            margin-bottom: 20px
+          .content
+            font-size: 14px
+          &.thumbnail
+            padding: 0
+            +flex-box()
+            img
+              width: 100%

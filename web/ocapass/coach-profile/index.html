@@ -1,0 +1,161 @@
+---
+  title: Our Coach
+  layout: main
+---
+<div class="container-fluid">
+  <div class="row bg-white oca-section wrapper" id="our-coaches">
+    <div class="container">
+      <h1 class="page-title">Our Coaches <br> <i class="fa fa-caret-down color-cerulean"></i></h1>   
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 coach">
+          <div class="coach-container">
+            <div class="coach-avatar">
+              <img src="http://placehold.it/300x300" alt="">
+            </div>
+            <div class="coach-content">
+              <span class="coach-name">Joel Houston</span>
+              <span class="separator"></span>
+              <div class="coach-title">
+                Lorem ipsum dolor sit amet <br>
+                Minus culpa<br>
+                Odio pariatur non in recusandae eveniet
+              </div>
+              <div class="coach-socmed">
+                  <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                  <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+                  <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 coach">
+          <div class="coach-container">
+            <div class="coach-avatar">
+              <img src="http://placehold.it/300x300" alt="">
+            </div>
+            <div class="coach-content">
+              <span class="coach-name">Joel Houston</span>
+              <span class="separator"></span>
+              <div class="coach-title">
+                Lorem ipsum dolor sit amet <br>
+                Minus culpa<br>
+                Odio pariatur non in recusandae eveniet
+              </div>
+              <div class="coach-socmed">
+                <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+                <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 coach">
+          <div class="coach-container">
+            <div class="coach-avatar">
+              <img src="http://placehold.it/300x300" alt="">
+            </div>
+            <div class="coach-content">
+              <span class="coach-name">Joel Houston</span>
+              <span class="separator"></span>
+              <div class="coach-title">
+                Lorem ipsum dolor sit amet <br>
+                Minus culpa<br>
+                Odio pariatur non in recusandae eveniet
+              </div>
+              <div class="coach-socmed">
+                  <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                  <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+                  <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="coach-new-line-separator"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 coach">
+          <div class="coach-container">
+            <div class="coach-avatar">
+              <img src="http://placehold.it/300x300" alt="">
+            </div>
+            <div class="coach-content">
+              <span class="coach-name">Joel Houston</span>
+              <span class="separator"></span>
+              <div class="coach-title">
+                Lorem ipsum dolor sit amet <br>
+                Minus culpa<br>
+                Odio pariatur non in recusandae eveniet
+              </div>
+              <div class="coach-socmed">
+                <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+                <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 coach">
+          <div class="coach-container">
+            <div class="coach-avatar">
+              <img src="http://placehold.it/300x300" alt="">
+            </div>
+            <div class="coach-content">
+              <span class="coach-name">Joel Houston</span>
+              <span class="separator"></span>
+              <div class="coach-title">
+                Lorem ipsum dolor sit amet <br>
+                Minus culpa<br>
+                Odio pariatur non in recusandae eveniet
+              </div>
+              <div class="coach-socmed">
+                <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+                <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 coach">
+          <div class="coach-container">
+            <div class="coach-avatar">
+              <img src="http://placehold.it/300x300" alt="">
+            </div>
+            <div class="coach-content">
+              <span class="coach-name">Joel Houston</span>
+              <span class="separator"></span>
+              <div class="coach-title">
+                Lorem ipsum dolor sit amet <br>
+                Minus culpa<br>
+                Odio pariatur non in recusandae eveniet
+              </div>
+              <div class="coach-socmed">
+                <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+                <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.addEventListener("load", function(event) {
+    let coaches = document.querySelectorAll('.coach')
+    let newLineSeparator = document.querySelectorAll('.coach-new-line-separator')
+    for (let i = 0; i < coaches.length; i++) {
+      setTimeout (() => {
+        coaches[i].classList.add('active')
+      }, 200 * i)
+      if (i > 0 && i % 3 === 0 && newLineSeparator[i/3 - 1]) {
+        newLineSeparator[i/3 - 1].classList.add('active')
+      }
+
+    }
+  })
+</script>

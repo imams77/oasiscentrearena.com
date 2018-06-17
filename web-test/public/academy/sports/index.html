@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome To Oasis Centre Arena</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/vendors/fontawesome-5/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="/assets/vendors/slick/slick.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <header>
+  <nav id="oca-navbar">
+    <div class="container">
+      <div class="row navbar-container">
+        <a class="navbar-brand" href="/"><img src="/assets/images/logo.png" alt=""></a>
+        <div class="oca-menu">
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/ticketing-and-pricing">TICKETING & PRICING </a></li>
+            <li><a href="/academy/sports">ACADEMY </a></li>
+            <!-- <li class="has-submenu collapsed" data-submenu="academy" onclick="expandSubmenu('academy')"><a>ACADEMY</a>
+              <div class="submenu " >
+                <ul>
+                  <li><a href="/">Price Table</a></li>
+                  <li><a href="/academy/sports">Sports</a></li>
+                  <li><a href="/">Coach Profile</a></li>
+                  <li><a href="/">Athlete Training Program</a></li>
+                  <li><a href="/">Skating Academy Rules & Regulations</a></li>
+                </ul>
+              </div>
+            </li> -->
+            <li class="has-submenu collapsed" onclick="expandSubmenu('ocapass')" data-submenu="ocapass"><a>OCAPASS</a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="/ocapass/price-table">Price Table</a></li>
+                  <li><a href="/academy/sports">Sports</a></li>
+                  <li><a href="/ocapass/coach-profile">Coach Profile</a></li>
+                  <li><a href="/ocapass/athlete-training-programme">Athlete Training Program</a></li>
+                  <li><a href="/ocapass/rules-regulations">Skating Academy Rules & Regulations</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="/facilities">FACILITIES</a></li>
+            <li><a href="/events-promotions">EVENTS & PROMOTIONS</a></li>
+            <li><a href="/contact-us">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+  <div id="modal">
+    <div id="modal-container">
+      <div id="modal-close" onclick="hideModal()"><i class="fa fa-times"></i></div>
+      <div class="header">
+        <h2 class="title">RULES & REGULATIONS</h2>
+        <div class="subtitle"></div>
+      </div>
+      <div class="content">
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="container">
+    <div class="row">
+      <h1 class="page-title">THE SPORTS</h1>    
+      <div class="row sport-section" id="sport-figure-skating">
+        <div class="sport-content col-sm-6">
+          <div class="sport-title">
+            <span>FIGURE</span>
+            <span>SKATING</span>
+          </div>
+          <p class="sport-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At optio et architecto impedit minima consectetur magni pariatur eaque, ab, illo labore eligendi odit, eveniet non. Quos vel beatae nisi nostrum!</p>
+        </div>
+        <div class="sport-image col-sm-7">
+          <img src="/assets/images/fs.png" alt="">
+        </div>
+      </div>
+      <div class="row sport-section" id="sport-ice-hockey">
+        <div class="sport-image col-sm-8">
+          <img src="/assets/images/ih.png" alt="">
+        </div>
+        <div class="sport-content col-sm-3 col-sm-offset-1">
+          <div class="sport-title ">
+            <span>ICE</span>
+            <span>HOCKEY</span>
+          </div>
+          <p class="sport-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At optio et architecto impedit minima consectetur magni pariatur eaque, ab, illo labore eligendi odit, eveniet non. Quos vel beatae nisi nostrum!</p>
+        </div>
+        
+      </div>
+      <div class="row sport-section" id="sport-stss-skating">
+        <div class="sport-content col-sm-6">
+          <div class="sport-title">
+            <span>SHORT TRACK</span>
+            <span>SPEED SKATING</span>
+          </div>
+          <p class="sport-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At optio et architecto impedit minima consectetur magni pariatur eaque, ab, illo labore eligendi odit, eveniet non. Quos vel beatae nisi nostrum!</p>
+        </div>
+        <div class="sport-image col-sm-6">
+          <img src="/assets/images/stss.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="footer-calendar">
+  <div class="container">
+    <div class="row">
+      <div class="visit-container">
+        <h6>VISIT <br> OASIS CENTRE ARENA</h6>
+        <ul class="visit-menu" >
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <a href="#"> LOREM IPSUM</a>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <a href="#"> DOLOR SIT AMET</a>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <a href="#"> CONSECTETUR ADIPISCING </a>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <a href="#"> LOREM IPSUM <br> DOLOR SIT AMET</a>
+          </li>
+        </ul>
+      </div>
+      <div class="calendar-container triangle-down first-child">
+        <div class="content">
+          <div class="calendar">
+            <span class="month">NOV</span>
+            <span class="date">30</span>
+          </div>
+          <p class="detail">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+      <div class="calendar-container triangle-up second-child">
+        <div class="content">
+          <div class="calendar">
+            <span class="month">NOV</span>
+            <span class="date">30</span>
+          </div>
+          <p class="detail">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+      <div class="calendar-container triangle-down third-child">
+        <div class="content">
+          <div class="calendar">
+            <span class="month">NOV</span>
+            <span class="date">30</span>
+          </div>
+          <p class="detail">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <footer>
+  <div class="container">
+    <h1 class="footer-title">Contact Us.</h1>
+    <div class="address-container">
+      <div class="address">
+        <i class="fas fa-map-marker fa-2x"></i>
+        <div class="content">
+          <p>
+            <strong>OASIS CENTRE ARENA</strong><br>
+            AEON MALL Jakarta Garden City<br>
+            Jl. Boulevard Jakarta Garden City<br> 
+            Cakung - Jakarta Timur, 13910
+          </p>
+        </div>
+      </div>
+      <div class="address">
+        <i class="fas fa-phone fa-2x"></i>
+        <div class="content">
+          <p>+62 821 9977 7890</p>
+        </div>
+      </div>
+      <div class="address">
+        <i class="fas fa-envelope fa-2x"></i>
+        <div class="content">
+          <p>info@oasiscentrearena.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="social-media">
+      <div class="footer-title">Connect <span>with Us</span></div>
+      <div class="social-media-container">
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <span>&copy; 2017 Oasis Centre Arena</span>
+  </div>
+</footer>
+  <script src="/assets/vendors/jquery/jquery-3.2.1.js"></script>
+  <script src="/assets/vendors/popper/popper-1.12.9.js"></script>
+  <script src="/assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script defer src="/assets/vendors/fontawesome-5/js/fontawesome-all.min.js"></script>
+  <script defer src="/assets/vendors/slick/slick.min.js"></script>
+  <script type="text/javascript" src="/assets/js/rules-regulations.js"></script>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  <!-- <script src="/assets/js/scripts.js"></script> -->
+  <script src="index.js"></script>
+</body>
+</html>

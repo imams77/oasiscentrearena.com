@@ -1,0 +1,35 @@
+=table($border-width: 2px ,$border-color: black, $border-radius: 10px, $outer-border-width: $border-width + 2px)
+  padding: 40px 0
+  .curved-table, .square-table
+    & > .row
+      &:first-child
+        .col
+          border-top: $outer-border-width solid $border-color
+      &:last-child
+        .col
+          border-bottom-width: $outer-border-width
+  .col
+    padding: 10px 25px
+    overflow: hidden
+    margin: 0
+    border: $border-width solid $border-color
+    border-top: none
+    border-left: none
+    &:first-child
+      border-left: $outer-border-width solid $border-color
+    &:last-child
+      border-right: $outer-border-width solid $border-color
+    &.col-top-left
+      border-top-left-radius: $border-radius
+    &.col-top-right
+      border-top-right-radius: $border-radius
+    &.col-bottom-left
+      border-bottom-left-radius: $border-radius
+    &.col-bottom-right
+      border-bottom-right-radius: $border-radius
+
+=flex-box($justify-content: center, $align-items: center, $flex-direction: row)
+  display: flex
+  justify-content: $justify-content
+  align-items: $align-items
+  flex-direction: $flex-direction

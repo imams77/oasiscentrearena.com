@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome To Oasis Centre Arena</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/vendors/fontawesome-5/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="/assets/vendors/slick/slick.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <header>
+  <nav id="oca-navbar">
+    <div class="container">
+      <div class="row navbar-container">
+        <a class="navbar-brand" href="/"><img src="/assets/images/logo.png" alt=""></a>
+        <div class="oca-menu">
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/ticketing-and-pricing">TICKETING & PRICING </a></li>
+            <li><a href="/academy/sports">ACADEMY </a></li>
+            <!-- <li class="has-submenu collapsed" data-submenu="academy" onclick="expandSubmenu('academy')"><a>ACADEMY</a>
+              <div class="submenu " >
+                <ul>
+                  <li><a href="/">Price Table</a></li>
+                  <li><a href="/academy/sports">Sports</a></li>
+                  <li><a href="/">Coach Profile</a></li>
+                  <li><a href="/">Athlete Training Program</a></li>
+                  <li><a href="/">Skating Academy Rules & Regulations</a></li>
+                </ul>
+              </div>
+            </li> -->
+            <li class="has-submenu collapsed" onclick="expandSubmenu('ocapass')" data-submenu="ocapass"><a>OCAPASS</a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="/ocapass/price-table">Price Table</a></li>
+                  <li><a href="/academy/sports">Sports</a></li>
+                  <li><a href="/ocapass/coach-profile">Coach Profile</a></li>
+                  <li><a href="/ocapass/athlete-training-programme">Athlete Training Program</a></li>
+                  <li><a href="/ocapass/rules-regulations">Skating Academy Rules & Regulations</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="/facilities">FACILITIES</a></li>
+            <li><a href="/events-promotions">EVENTS & PROMOTIONS</a></li>
+            <li><a href="/contact-us">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+  <div id="modal">
+    <div id="modal-container">
+      <div id="modal-close" onclick="hideModal()"><i class="fa fa-times"></i></div>
+      <div class="header">
+        <h2 class="title">RULES & REGULATIONS</h2>
+        <div class="subtitle"></div>
+      </div>
+      <div class="content">
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="container-fluid" id="price-table">
+  <div class="row">
+    <div class="container">
+      <h1 class="page-title">PRICE TABLE <br> <i class="fa fa-caret-down color-cerulean"></i></h1>    
+      <h2 class="page-subtitle">Skating Academy Price Table</h2>
+      <quotes class="price-table-quotes">
+          “Sign them up for skating lesson with profesional coaches”
+      </quotes>
+      <p class="price-table-quotes">
+          We aim to develop the best athletes by providing the best team and facilities to support your kids.
+          Our professional coaches can introduce basic skating skills in more technical detail and also more
+          easily identify any potentially to become an athletes. If you want to ensure your kids safe, happy,
+          and have an experience for years to come. Signing them up for classes is the best way to do
+      </p>
+      <div class="row">
+
+      </div>
+    </div>
+  </div>
+  <div class="row oca-section wrapper" id="registration-fee">
+    <div class="container">
+      <div class="col-sm-12 flex vertical-center">
+        <div class="row registration-title">
+          <h3 class="color-black"><strong>Registration Fee: </strong></h3><span class="oca-button btn-blue"><h4>IDR <br> 180,000</h4></span>
+        </div>
+      </div>
+      <!-- BASIC LEVEL TABLE -->
+      <div class="col-sm-12 oca-table curved-table" id="basic-level-pricing-table">
+        <div class="row first">
+          <div class="col-top-left first col-sm-2 col bg-cerulean">
+            <span></span>
+          </div>
+          <div class="col-sm-10 text-center col last bg-flamingo col-top-right">
+            <span><strong>BASIC LEVEL (ISI PRE ALPHA - DELTA)</strong></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2 col first bg-yellow-orange">
+            <span class="color-black"><strong>Type of <br> Lessons</strong></span>
+          </div>
+          <div class="no-padding col-sm-5 col bg-cerulean sub-table">
+            <div class="row first">
+              <div class="col-sm-12 col flex center bg-zest">WEEKDAY</div>
+            </div>
+            <div class="row last">
+              <div class="col-sm-6 col flex center vertical-center bg-zest">Coach</div>
+              <div class="col-sm-6 col flex center vertical-center bg-zest">Foreign <br> Coach</div>
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 last col bg-cerulean sub-table">
+            <div class="row first">
+              <div class="col-sm-12 col flex center bg-zest">WEEKEND</div>
+            </div>
+            <div class="row last">
+              <div class="col-sm-6 col flex center vertical-center bg-zest">Coach</div>
+              <div class="col-sm-6 col flex center vertical-center bg-zest">Foreign <br> Coach</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2 col first bg-roti">
+            <div>
+              <span><strong>Group</strong></span><br>
+              4-10 Students, <br>
+              5 x 30 Minutes <br>
+              lessons
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 col bg-white color-black sub-table bold">
+            <div class="row fill-height first last">
+              <div class="col-sm-6 col flex center vertical-center "><strong>220,000</strong></div>
+              <div class="col-sm-6 col flex center vertical-center">420,000</div>
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 last col bg-white color-black sub-table bold">
+            <div class="row fill-height first last">
+              <div class="col-sm-6 col flex center vertical-center">270,000</div>
+              <div class="col-sm-6 col flex center vertical-center">470,000</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2 col first bg-brown">
+            <div>
+              <span><strong>Semi Private</strong></span><br>
+              2-3 Students, <br>
+              5 x 30 Minutes <br>
+              lessons
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 col bg-white color-black sub-table bold">
+            <div class="row fill-height first last">
+              <div class="col-sm-6 col flex center vertical-center">400,000</div>
+              <div class="col-sm-6 col flex center vertical-center">600,000</div>
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 col last bg-white color-black sub-table bold">
+            <div class="row fill-height first last">
+              <div class="col-sm-6 col flex center vertical-center">450,000</div>
+              <div class="col-sm-6 col flex center vertical-center">650,000</div>
+            </div>
+          </div>
+        </div>
+        <div class="row last">
+          <div class="col-sm-2 col first col-bottom-left bg-dark-brown">
+            <div>
+              <span><strong>Private</strong></span><br>
+              1 Student, <br>
+              5 x 30 Minutes <br>
+              lessons
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 col bg-white color-black sub-table bold">
+            <div class="row fill-height first last">
+              <div class="col-sm-6 col flex center vertical-center">700,000</div>
+              <div class="col-sm-6 col flex center vertical-center">900,000</div>
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 last col bg-white color-black col-bottom-right sub-table bold">
+            <div class="row fill-height first last">
+              <div class="col-sm-6 col flex center vertical-center">750,000</div>
+              <div class="col-sm-6 col flex center vertical-center">950,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ADVANCED LEVEL TABLE -->
+      <div class="col-sm-12 oca-table curved-table" id="advanced-level-pricing-table">
+        <div class="row first">
+          <div class="col-top-left first col-sm-2 col bg-cerulean">
+            <span></span>
+          </div>
+          <div class="col-sm-10 text-center col last bg-deep-cerulean col-top-right">
+            <span><strong>ADVANCE LEVEL (ISI FREESTYLE 1-10)</strong></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2 col first bg-yellow-orange">
+            <span class="color-black"><strong>Type of <br> Lessons</strong></span>
+          </div>
+          <div class="no-padding col-sm-5 col bg-cerulean sub-table">
+            <div class="row first">
+              <div class="col-sm-12 col flex center bg-zest">WEEKDAY</div>
+            </div>
+            <div class="row last">
+              <div class="col-sm-6 col flex center vertical-center bg-zest">Coach</div>
+              <div class="col-sm-6 col flex center vertical-center bg-zest">Foreign <br> Coach</div>
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 last col bg-cerulean sub-table">
+            <div class="row first">
+              <div class="col-sm-12 col flex center bg-zest">WEEKEND</div>
+            </div>
+            <div class="row last">
+              <div class="col-sm-6 col flex center vertical-center bg-zest">Coach</div>
+              <div class="col-sm-6 col flex center vertical-center bg-zest">Foreign <br> Coach</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2 col first bg-roti">
+            <div>
+              <span><strong>Group</strong></span><br>
+              4-10 Students, <br>
+              5 x 30 Minutes <br>
+              lessons
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 col bg-white color-black sub-table bold">
+            <div class="row fill-height first last">
+              <div class="col-sm-6 col flex center vertical-center "><strong>270,000</strong></div>
+              <div class="col-sm-6 col flex center vertical-center">470,000</div>
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 last col bg-white color-black sub-table bold">
+            <div class="row fill-height first last">
+              <div class="col-sm-6 col flex center vertical-center">320,000</div>
+              <div class="col-sm-6 col flex center vertical-center">520,000</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2 col first bg-brown">
+            <div>
+              <span><strong>Semi Private</strong></span><br>
+              2-3 Students, <br>
+              5 x 30 Minutes <br>
+              lessons
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 col bg-white color-black sub-table bold">
+            <div class="row fill-height first last">
+              <div class="col-sm-6 col flex center vertical-center">450,000</div>
+              <div class="col-sm-6 col flex center vertical-center">650,000</div>
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 col last bg-white color-black sub-table bold">
+            <div class="row fill-height first last">
+              <div class="col-sm-6 col flex center vertical-center">500,000</div>
+              <div class="col-sm-6 col flex center vertical-center">700,000</div>
+            </div>
+          </div>
+        </div>
+        <div class="row last">
+          <div class="col-sm-2 col first col-bottom-left bg-dark-brown">
+            <div>
+              <span><strong>Private</strong></span><br>
+              1 Student, <br>
+              5 x 30 Minutes <br>
+              lessons
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 col bg-white color-black sub-table bold">
+            <div class="row fill-height first last">
+              <div class="col-sm-6 col flex center vertical-center">750,000</div>
+              <div class="col-sm-6 col flex center vertical-center">950,000</div>
+            </div>
+          </div>
+          <div class="no-padding col-sm-5 last col bg-white color-black col-bottom-right sub-table bold">
+            <div class="row fill-height first last">
+              <div class="col-sm-6 col flex center vertical-center">800,000</div>
+              <div class="col-sm-6 col flex center vertical-center">1,000,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slant left end"></div>
+  </div>
+</div>
+    <div id="footer-calendar">
+  <div class="container">
+    <div class="row">
+      <div class="visit-container">
+        <h6>VISIT <br> OASIS CENTRE ARENA</h6>
+        <ul class="visit-menu" >
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <a href="#"> LOREM IPSUM</a>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <a href="#"> DOLOR SIT AMET</a>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <a href="#"> CONSECTETUR ADIPISCING </a>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right"></i>
+            <a href="#"> LOREM IPSUM <br> DOLOR SIT AMET</a>
+          </li>
+        </ul>
+      </div>
+      <div class="calendar-container triangle-down first-child">
+        <div class="content">
+          <div class="calendar">
+            <span class="month">NOV</span>
+            <span class="date">30</span>
+          </div>
+          <p class="detail">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+      <div class="calendar-container triangle-up second-child">
+        <div class="content">
+          <div class="calendar">
+            <span class="month">NOV</span>
+            <span class="date">30</span>
+          </div>
+          <p class="detail">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+      <div class="calendar-container triangle-down third-child">
+        <div class="content">
+          <div class="calendar">
+            <span class="month">NOV</span>
+            <span class="date">30</span>
+          </div>
+          <p class="detail">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <footer>
+  <div class="container">
+    <h1 class="footer-title">Contact Us.</h1>
+    <div class="address-container">
+      <div class="address">
+        <i class="fas fa-map-marker fa-2x"></i>
+        <div class="content">
+          <p>
+            <strong>OASIS CENTRE ARENA</strong><br>
+            AEON MALL Jakarta Garden City<br>
+            Jl. Boulevard Jakarta Garden City<br> 
+            Cakung - Jakarta Timur, 13910
+          </p>
+        </div>
+      </div>
+      <div class="address">
+        <i class="fas fa-phone fa-2x"></i>
+        <div class="content">
+          <p>+62 821 9977 7890</p>
+        </div>
+      </div>
+      <div class="address">
+        <i class="fas fa-envelope fa-2x"></i>
+        <div class="content">
+          <p>info@oasiscentrearena.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="social-media">
+      <div class="footer-title">Connect <span>with Us</span></div>
+      <div class="social-media-container">
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <span>&copy; 2017 Oasis Centre Arena</span>
+  </div>
+</footer>
+  <script src="/assets/vendors/jquery/jquery-3.2.1.js"></script>
+  <script src="/assets/vendors/popper/popper-1.12.9.js"></script>
+  <script src="/assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script defer src="/assets/vendors/fontawesome-5/js/fontawesome-all.min.js"></script>
+  <script defer src="/assets/vendors/slick/slick.min.js"></script>
+  <script type="text/javascript" src="/assets/js/rules-regulations.js"></script>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  <!-- <script src="/assets/js/scripts.js"></script> -->
+  <script src="index.js"></script>
+</body>
+</html>

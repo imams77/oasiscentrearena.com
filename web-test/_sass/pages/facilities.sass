@@ -1,0 +1,238 @@
+$bubble-top-benchmark: 120px
+$bubble-left-benchmark: 350px
+$image-width: 500px
+.facilities
+  &.hero-image
+    height: 900px
+#facilities-banner
+  overflow: hidden
+  position: relative
+  height: 100%
+  #facilities-banner-content
+    z-index: 0
+    #facilities-banner-items
+      .main-image
+        align-items: center
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        img
+          width: 600px
+          display: inline-block
+      .items-container
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 83px
+        .mascot-items, .bubble-items
+          .text
+            color: white
+            position: absolute
+            width: 100%
+            text-align: center
+        .mascot-items
+          position: absolute
+          height: 180px
+          width: 120px
+          .mascot-img
+            height: 180px
+            width: 120px
+            background-size: contain
+            background-repeat: no-repeat
+            .arrow
+              transform: rotate(-60deg) scale(.8)
+        .bubble-items
+          position: absolute
+          .items-img
+            width: 150px
+            height: 150px
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            border-radius: 100%
+            border-width: 3px
+            border-style: solid
+            .arrow
+              background-image: url('/assets/images/facilities/hero-banners/arrow.png')
+              height: 100px
+              width: 50px
+              background-repeat: no-repeat
+              background-size: contain
+              background-position: center
+              position: absolute
+            &.cyan
+              border-color: $color-malibu
+            &.purple
+              border-color: $color-disco
+            &.orange
+              border-color: $color-yellow-orange
+  #facilities-banner-bg
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 0
+    position: absolute
+    & > #snow-bg-1
+      left: 90%
+      top: $bubble-top-benchmark
+    & > #snow-bg-2
+      top: 90%
+      left: 80%
+    & > #snow-bg-3
+      top: 78%
+      left: 70%
+    & > #snow-bg-4
+      top: 80%
+      left: 50%
+    & > #snow-bg-5
+      top: 90%
+      left: 20%
+    & > #snow-bg-6
+      top: 300px
+      left: 50px
+    & > #snow-bg-7
+      top: 80px
+      left: 50%
+    & > #snow-bg-8
+      top: 70px
+      left: 80%
+    & > .snow-bg
+      background-size: contain
+      background-position: center
+      position: absolute
+      background-repeat: no-repeat
+      &.big
+        background-image: url('/assets/images/facilities/hero-banners/bg/snow-big.png')
+        width: 200px
+        height: 200px
+      &.medium
+        background-image: url('/assets/images/facilities/hero-banners/bg/snow-medium.png')
+        width: 120px
+        height: 120px
+      &.small
+        background-image: url('/assets/images/facilities/hero-banners/bg/snow-small.png')
+        width: 60px
+        height: 60px
+      &.tiny
+        background-image: url('/assets/images/facilities/hero-banners/bg/snow-small.png')
+        width: 20px
+        height: 20px
+
+
+.mascot-items
+  &#mascot-1
+    left: calc(#{$bubble-left-benchmark} + 640px)
+    top: calc(#{$bubble-top-benchmark} + 515px)
+    .mascot-img
+      height: 220px
+      width: 130px
+    .arrow
+      top: 49px
+      left: -6px
+    .text
+      top: 52px
+      left: -60px
+  &#mascot-2
+    left: calc(#{$bubble-left-benchmark} + 530px)
+    top: calc(#{$bubble-top-benchmark} + 515px)
+    .arrow
+      top: 39px
+      left: -18px
+    .text
+      top: 46px
+      left: -80px
+.bubble-items
+  &#bubble-1
+    left: calc(#{$bubble-left-benchmark} + #{$image-width} + 350px)
+    top: calc(#{$bubble-top-benchmark} + 0px)
+    .arrow
+      transform: rotate3d(-1,1,0 , 180deg)
+      top: 80px
+      left: -60px
+    .text
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      right: -80px
+      bottom: -30px
+      .big-number
+        font-size: 50px
+        margin-left: 5px
+  &#bubble-2
+    left: calc(#{$bubble-left-benchmark} + #{$image-width} + 430px)
+    top: calc(#{$bubble-top-benchmark} + 190px)
+    .arrow
+      transform: rotate3d(-1.6,1,0, 180deg)
+      left: -60px
+      top: 51px
+    .text
+      bottom: -25px
+  &#bubble-3
+    left: calc(#{$bubble-left-benchmark} + #{$image-width} + 380px)
+    top: calc(#{$bubble-top-benchmark} + 380px)
+    .arrow
+      transform: rotate3d(-2,1,0, 180deg)
+      top: 0
+      left: -70px
+    .text
+      bottom: -25px
+  &#bubble-4
+    left: calc(#{$bubble-left-benchmark} + 200px)
+    top: calc(#{$bubble-top-benchmark} + 515px)
+    .arrow
+      transform: rotate(180deg)
+      top: -60px
+      right: -30px
+    .text
+      bottom: -25px
+  &#bubble-5
+    left: calc(#{$bubble-left-benchmark} + 0px)
+    top: calc(#{$bubble-top-benchmark} + 340px)
+    .arrow
+      transform: rotate3d(1.9, 1, 0, 180deg) scale(0.6)
+      top: -35px
+      right: -31px
+    .text
+      bottom: -25px
+  &#bubble-6
+    left: calc(#{$bubble-left-benchmark} + 0px)
+    top: calc(#{$bubble-top-benchmark} + 146px)
+    .arrow
+      right: -38px
+      top: 98px
+      transform: rotate(-80deg)
+    .text
+      bottom: -25px
+
+#facilities-content
+  max-width: 960px
+  img
+    max-width: 100%
+    &.ice-resurface-time
+      width: 400px
+  .ice-resurface-schedule
+    padding: 30px 0
+    .oca-button
+      padding: 10px 15px
+      border-radius: 10px
+      font-size: 10px
+      &:hover
+        cursor: auto
+        opacity: 1
+#facilities-food
+  background-color: rgba(100,100,100,.2)
+  & > .row > .container
+    max-width: 960px
+  .dummy-image
+    width: 300px
+    height: 200px
+    display: block
+    background-color: #888
+    margin-left: 50px
+.text-big
+  font-size: 20px
+  font-weight: 700
