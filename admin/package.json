@@ -8,13 +8,26 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^2.5.16"
+    "ajv": "^6.5.2",
+    "es6-promise": "^4.2.4",
+    "firebase": "^5.2.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "vue": "^2.5.16",
+    "vue-2-crumbs": "^0.5.2",
+    "vue-clickaway": "^2.2.2",
+    "vue-material": "^1.0.0-beta-10.2",
+    "vue-router": "^3.0.1",
+    "vue-style-loader": "^4.1.0",
+    "vuefire": "^2.0.0-alpha.12"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
     "@vue/cli-service": "^3.0.0-beta.15",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.14.0"
   },
   "eslintConfig": {
     "root": true,
