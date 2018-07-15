@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
     <notifications></notifications>
-
     <side-bar>
       <mobile-menu slot="content"></mobile-menu>
       <sidebar-link to="/">
@@ -12,9 +11,9 @@
         <md-icon>view_quilt</md-icon>
         <p>Web Pages</p>
       </sidebar-link>
-      <sidebar-link :to="{name: 'news'}">
+      <sidebar-link :to="{name: 'events'}">
         <md-icon>rss_feed</md-icon>
-        <p>News</p>
+        <p>Events</p>
       </sidebar-link>
       <sidebar-link :to="{name: 'images'}">
         <md-icon>image</md-icon>
@@ -24,26 +23,6 @@
         <md-icon>room</md-icon>
         <p>Location</p>
       </sidebar-link>
-      <!-- <sidebar-link :to="{name: 'academy'}">
-        <md-icon>content_paste</md-icon>
-        <p>Academy</p>
-      </sidebar-link>
-      <sidebar-link to="/typography">
-        <md-icon>library_books</md-icon>
-        <p>Ocapass</p>
-      </sidebar-link>
-      <sidebar-link to="/icons">
-        <md-icon>bubble_chart</md-icon>
-        <p>Facilities</p>
-      </sidebar-link>
-      <sidebar-link to="/maps">
-        <md-icon>location_on</md-icon>
-        <p>Events & Promotions</p>
-      </sidebar-link>
-      <sidebar-link to="/notifications">
-        <md-icon>notifications</md-icon>
-        <p>Contact</p>
-      </sidebar-link> -->
     </side-bar>
 
     <div class="main-panel">
@@ -74,4 +53,5 @@ export default {
     MobileMenu
   }
 }
+
 </script>

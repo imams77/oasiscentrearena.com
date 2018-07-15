@@ -2,7 +2,6 @@
   <div class="content">
     <div class="md-layout">
       <h2>Websites</h2>
-      <breadcrumbs />
       <div class="website-lists">
         <ul class="oca-square-lists">
           <li v-for="(web, i) in webList" :key=i>
@@ -83,9 +82,9 @@ export default {
           link: 'facilities'
         },
         {
-          title: 'Events & Promotions',
+          title: 'Promotions',
           icon: 'event',
-          link: 'events_promotions'
+          link: 'promotions'
         },
         {
           title: 'Contact',

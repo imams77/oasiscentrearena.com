@@ -10,3 +10,9 @@
     </div>
   </div>
 </template>
+<script>
+// import api from '@/api.js'
+export default {
+
+}
+</script>

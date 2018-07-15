@@ -3,13 +3,20 @@ layout: main-home
 title: Welcome to Oasiscentrearena
 ---
 <div class="hero-video" id="home-video">
-  <span class="play-btn"><i class="fa fa-3x fa-caret-right"></i></span>
+  <video  autoplay muted loop id="myVideo">
+    <source src="/assets/videos/compro.mp4" type="video/mp4">
+  </video>
+  <!-- <span class="play-btn"><i class="fa fa-3x fa-caret-right"></i></span>
   <div class="text">
     <h5>EXPERIENCE</h5>
     <h1>THE SPEED</h1>
-  </div>
+  </div> -->
+  <span class="scroll-bottom">
+    <!-- <span onclick="scrollDown()"><i class="fa fa-3x fa-chevron-down"></i></span> -->
+  </span>
 </div>
-<div class="container-fluid">
+{% include header-fixed.html %}
+<div class="container-fluid" id="scrollAnchor">
   <div class="row">
     <div class="col-sm-12 slideshow-container">
       <div class="slideshow row">
@@ -31,52 +38,56 @@ title: Welcome to Oasiscentrearena
             <ul class="visit-menu" >
               <li>
                 <i class="fas fa-chevron-right"></i>
-                <a href="#"> LOREM IPSUM</a>
+                <a href="/visit"> VISIT</a>
               </li>
               <li>
                 <i class="fas fa-chevron-right"></i>
-                <a href="#"> DOLOR SIT AMET</a>
+                <a href="/ticketing-pricing"> TICKETING & PRICING</a>
               </li>
               <li>
                 <i class="fas fa-chevron-right"></i>
-                <a href="#"> CONSECTETUR ADIPISCING </a>
+                <a href="/facilities"> FACILITIES </a>
               </li>
               <li>
                 <i class="fas fa-chevron-right"></i>
-                <a href="#"> LOREM IPSUM <br> DOLOR SIT AMET</a>
+                <a href="/events"> EVENTS</a>
+              </li>
+              <li>
+                <i class="fas fa-chevron-right"></i>
+                <a href="/promotions"> PROMOTIONS</a>
               </li>
             </ul>
           </div>
           <div class="calendar-container triangle-down first-child">
             <div class="content">
               <div class="calendar">
-                <span class="month">NOV</span>
-                <span class="date">30</span>
+                <span class="month">JUL</span>
+                <span class="date">6</span>
               </div>
               <p class="detail">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+               
               </p>
             </div>
           </div>
           <div class="calendar-container triangle-up second-child">
             <div class="content">
               <div class="calendar">
-                <span class="month">NOV</span>
-                <span class="date">30</span>
+                <span class="month">JUL</span>
+                <span class="date">7</span>
               </div>
               <p class="detail">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+               
               </p>
             </div>
           </div>
           <div class="calendar-container triangle-down third-child">
             <div class="content">
               <div class="calendar">
-                <span class="month">NOV</span>
-                <span class="date">30</span>
+                <span class="month">JUL</span>
+                <span class="date">8</span>
               </div>
               <p class="detail">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+               
               </p>
             </div>
           </div>
@@ -85,33 +96,33 @@ title: Welcome to Oasiscentrearena
           <div class="calendar-container triangle-down first-child">
             <div class="content">
               <div class="calendar">
-                <span class="month">NOV</span>
-                <span class="date">30</span>
+                <span class="month">JUL</span>
+                <span class="date">9</span>
               </div>
               <p class="detail">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+               
               </p>
             </div>
           </div>
           <div class="calendar-container triangle-up second-child">
             <div class="content">
               <div class="calendar">
-                <span class="month">NOV</span>
-                <span class="date">30</span>
+                <span class="month">JUL</span>
+                <span class="date">10</span>
               </div>
               <p class="detail">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+               
               </p>
             </div>
           </div>
           <div class="calendar-container triangle-down third-child">
             <div class="content">
               <div class="calendar">
-                <span class="month">NOV</span>
-                <span class="date">30</span>
+                <span class="month">JUL</span>
+                <span class="date">11</span>
               </div>
               <p class="detail">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+               
               </p>
             </div>
           </div>
@@ -126,9 +137,10 @@ title: Welcome to Oasiscentrearena
       <div id="oca-map"></div>
       <div class="map-caption">
         <div class="caption-content color-white">
-          <div class="title">LOREM IPSUM</div>
-          <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas debitis sequi.</p>
-          <span class="oca-button btn-transparent">READ MORE</span>
+          <div class="title">Oasis Centre Arena</div>
+          <p class="content">AEON MALL Jakarta Garden City,
+              Cakung - Jakarta Timur, 13910</p>
+          <a class="oca-button btn-transparent" href="/visit">VISIT</a>
         </div>
       </div>
     </div>

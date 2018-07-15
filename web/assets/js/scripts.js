@@ -11,6 +11,65 @@ function initMap() {
     icon: '/assets/images/marker.png'
   });
 }
+function animateHomeVideo (direction) {
+  let windowHeight = window.innerHeight
+  let headerHeight = 150
+  let smallHeaderHeight = 80
+  $('.hero-video').css({'height': (windowHeight-headerHeight) + 'px'})
+  let videoHeight = $('#home-video').height()
+  let alreadyScrolling = false
+  if (window.scrollY > 0 && window.scrollY < videoHeight) {
+    if (direction === 'up') {
+      // $("html, body").animate({ scrollTop: 0 }, 500);
+    } else {
+      // $("html, body").animate({ scrollTop: videoHeight }, 500);
+    }
+  }
+  // }
+  if (window.scrollY > videoHeight) {
+    $('#scrollAnchor').addClass('home')
+    $('header').addClass('fixed small')
+    setTimeout(() => {
+    }, 200)
+  } else {
+    // $('header').addClass('absolute')
+    $('#scrollAnchor').removeClass('home')
+    $('header').removeClass('fixed small')
+    // $('.hero-video').addClass('active')
+  }
+  // console.log(scroll)
+  // if (scroll > 0 && scroll <= (windowHeight - headerHeight)) {
+    // if (!$('.hero-video').hasClass('active')) {
+      // for (let i = 1; i <= (windowHeight - headerHeight); i++) {
+        // $('html').css({'transform': 'translateY(0px))'})
+        // while(i < (windowHeight - headerHeight)) {
+        //   setTimeout(() => {
+        //     window.scrollTo(0, i)
+        //     // $('.hero-video').css({'height': i + 'px'})
+        //     // $('.hero-video video').css({'opacity': '1'})
+        //   }, 1000)
+        // }
+      // }
+      
+    // }
+  // }
+  // if (mode === 'show') {
+  // } else {
+  //   if ($('.hero-video').hasClass('active')) {
+  //     for (let i = 0; i <= (windowHeight - headerHeight); i++) {
+  //       setTimeout(() => {
+  //         $('.hero-video').css({'height': ((windowHeight - headerHeight) - i) + 'px'})
+  //       }, 100)
+  //       // if (i === (windowHeight-headerHeight)) {
+  //       //   $('header').css({'opacity': 1, 'bottom': 'calc(100% - 150px)'})
+  //       // }
+  //     }
+  //     $('header').addClass('fixed')
+  //     $('.hero-video').removeClass('active')
+  //     $('header').removeClass('absolute')
+  //   // }
+  // }
+}
 function clickAnywhereToHide(selectedClass, removedClass, reverse = 
   false) {
   // selectedClass : class yang mau di hide
@@ -29,6 +88,9 @@ function clickAnywhereToHide(selectedClass, removedClass, reverse =
     e.stopPropagation()
   })
   
+}
+function sendSubscription (email) {
+  showModal()
 }
 function expandSubmenu (submenu) {
   // $('.has-submenu').addClass('collapsed')
@@ -76,6 +138,9 @@ function stairedPadding (containerName, padding, start = 0) {
     x[i].style.marginLeft = i * padding + start + 'px'
   }
 }
+function scrollDown () {
+  $("html, body").animate({ scrollTop: $('#scrollAnchor').offset().top }, 1000);
+}
 function animate() {
   let scrollValue = window.scrollY
   let x = document.querySelectorAll('.sport-section')
@@ -114,24 +179,49 @@ function showModal () {
 }
 function hideModal () {
   $('#modal').removeClass('active')
+  $('#modal-container').removeClass()
   setTimeout(() => {
     $('#modal .subtitle').html('')
     $('#modal .content').html('')
   }, 200)
 }
-function fillRulesRegulations (name) {
+function fillModal (id, arrays, containerClass) {
+  if (containerClass) {
+    $('#modal-container').addClass(containerClass)
+  }
   let selected = {}
-  rules.map(rule => {
-    if (rule.name === name) {
-      selected = rule
-      console.log(rule)
-      $('#modal .subtitle').html(rule.title)
-      $('#modal .content').html(rule.content)
+  arrays.map(arr => {
+    if (arr.id === id) {
+      selected = arr
+      $('#modal .title').html(arr.title)
+      $('#modal .subtitle').html(arr.subtitle)
+      $('#modal .content').html(arr.content)
     }
   })
 }
-function showRulesRegulations (name) {
-  fillRulesRegulations (name)
+function facilitiesHeaderResponsive () {
+  let initial = 1680
+  let mediumWidth = 1500
+  let smallWidth = 1400
+  let verySmallWidth = 990
+  let windowWidth = window.innerWidth
+  if (windowWidth > initial) {
+    $('#facilities-banner-items .items-container .items-item-container').css({left: '0px'})
+  }else if (windowWidth < initial && windowWidth > mediumWidth) {
+    $('#facilities-banner-items .items-container .items-item-container').css({left: (windowWidth - initial) + 'px'})
+  } else if (windowWidth < mediumWidth && windowWidth > smallWidth) {
+    $('#facilities-banner-items .items-container .items-item-container').css({left: (windowWidth - initial) + 100 + 'px'})
+  } else if  (windowWidth < smallWidth) {
+    $('#facilities-banner-items .items-container .items-item-container').css({left: (windowWidth - smallWidth + -100) + 'px'})
+  }
+
+}
+function showCoachProfile (id) {
+  fillModal (id, coaches, 'coaches-modal')
+  showModal ()
+}
+function showRulesRegulations (id) {
+  fillModal (id, rules)
   showModal()
 }
 function monthTransition (method, value = null) {
@@ -174,6 +264,11 @@ function generateYear () {
 var calendarBackground = document.getElementById('footer-calendar')
 var windowHeight = window.innerHeight
 $(document).ready(() => {
+  animateHomeVideo('show')
+  $('.calendar-container').click(() => {
+    window.location.href = '/contact-us';
+  })
+  facilitiesHeaderResponsive()
   generateYear()
   var today = new Date();
   try {
@@ -210,14 +305,22 @@ $(document).ready(() => {
     })
   })
   $('.background-image').addClass('active')
-  $('.slideshow').slick({
-    arrows: false,
-    dots: true,
-    appendDots: $('.dots-container'),
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  })
+  try {
+    $('.slideshow').slick({
+      arrows: true,
+      dots: true,
+      appendDots: $('.dots-container'),
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      nextArrow: `<span class="navigation next"><i class="fa fa-chevron-right fa-2x"></i></span>`,
+      prevArrow: `<span class="navigation prev"><i class="fa fa-chevron-left fa-2x"></i></span>`
+    })
+  } catch (e) {
+    console.log('no slideshow')
+  }
   clickAnywhereToHide('.has-submenu','collapsed', true)
   //add panah ke bawah klo menu nya punya submenu
   $('.has-submenu > a').append('&nbsp; &nbsp;<i class="fas fa-chevron-down"></i>')
@@ -226,16 +329,33 @@ $(document).ready(() => {
   animate()
 })
 
+$(window).resize(() => {
+  facilitiesHeaderResponsive()
+})
+
+var iScrollPos = 0;
 $(document).scroll(() => {
   animate()
   parallaxBackground()
   bodyWrapperParallax()
   
-  if ($(window).scrollTop() >= windowHeight) {
-    $('header.fixed').addClass('active')
+  var iCurScrollPos = $(this).scrollTop();
+  if (iCurScrollPos > iScrollPos) {
+    animateHomeVideo('down')
   } else {
-    $('header.fixed').removeClass('active')
+    animateHomeVideo('up')
   }
+  iScrollPos = iCurScrollPos;
+  // if (window.scrollY < 1) {
+  //   animateHomeVideo('show')
+  // } else {
+  //   animateHomeVideo('hide')
+  // }
+  // if ($(window).scrollTop() >= windowHeight) {
+  //   $('header.fixed').addClass('active')
+  // } else {
+  //   $('header.fixed').removeClass('active')
+  // }
   
   // calendarBackground.style.backgroundPositionY = window.scrollY / 3 + 'px'
 })

@@ -1,29 +1,33 @@
 const rules =
 [
   {
-    'name': 'general-rules',
-    'title': 'General Rules',
+    'id': 'general-rules',
+    'subtitle': 'General Rules',
+    'title': 'RULES & REGULATIONS',
     'content': `
         -
     `
   },
   {
-    'name': 'entry-ticket-rules',
-    'title': 'Entry Ticket Rules',
+    'id': 'entry-ticket-rules',
+    'subtitle': 'Entry Ticket Rules',
+    'title': 'RULES & REGULATIONS',
     'content': `
         -
     `
   },
   {
-    'name': 'condition-rules',
-    'title': 'Condition For Use Of Ice Skating Facility',
+    'id': 'condition-rules',
+    'subtitle': 'Condition For Use Of Ice Skating Facility',
+    'title': 'RULES & REGULATIONS',
     'content': `
         -
     `
   },
   {
-    'name': 'skating-rules',
-    'title': 'Skating Rules',
+    'id': 'skating-rules',
+    'subtitle': 'Skating Rules',
+    'title': 'RULES & REGULATIONS',
     'content': `
         <ul class="content-point">
         <li>
@@ -54,22 +58,25 @@ const rules =
     `
   },
   {
-    'name': 'safety-rules',
-    'title': 'Safety Advice for Skaters',
+    'id': 'safety-rules',
+    'subtitle': 'Safety Advice for Skaters',
+    'title': 'RULES & REGULATIONS',
     'content': `
         -
     `
   },
   {
-    'name': 'howto-rules',
-    'title': 'How to Lace up Your Skates',
+    'id': 'howto-rules',
+    'subtitle': 'How to Lace up Your Skates',
+    'title': 'RULES & REGULATIONS',
     'content': `
         -
     `
   },
   {
-    'name': 'disclaimer',
-    'title': 'Disclaimer',
+    'id': 'disclaimer',
+    'subtitle': 'Disclaimer',
+    'title': 'RULES & REGULATIONS',
     'content': `
         -
     `

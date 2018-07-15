@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import firebase from 'firebase'
+import 'firebase/firestore'
 import VueFire from 'vuefire'
 
 Vue.use(VueFire)
@@ -12,6 +13,12 @@ var config = {
   messagingSenderId: '359815397824'
 }
 let app = firebase.initializeApp(config)
-let api = app.database()
+const settings =
+  {
+    timestampsInSnapshots: true
+  }
+// let api = app.database()
+let api = app.firestore()
+api.settings(settings)
 
 export default api

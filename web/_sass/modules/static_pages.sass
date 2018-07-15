@@ -1,8 +1,13 @@
+header
+  *
+    transition: all .3s ease-in-out
 header, footer
+  z-index: 21
   color: white
   background-color: $color-background-header
   #oca-navbar
     background-color: $color-background-header
+    transition: all .4s ease-in-out
     color: white
     z-index: 100
     width: 100%
@@ -23,7 +28,8 @@ header, footer
           padding: 0
           margin: 0
           img
-            height: 100px
+            width: 150px
+            height: auto!important
     .oca-menu
       display: inline-flex
       align-items: flex-end
@@ -331,12 +337,22 @@ footer
           letter-spacing: 2px
           margin-top: 8px
 
-header.fixed
-  z-index: 5
-  position: fixed
-  width: 100%
-  transition: all ease-in-out .2s
-  transform: translateY(-100%)
-  &.active
-    transform: translateY(0)
-
+header
+  &.fixed
+    z-index: 21
+    position: fixed
+    width: 100%
+    bottom: auto
+    top: 0
+  &.small
+    #oca-navbar 
+      height: 80px
+      & > .container
+        height: 100%
+    .navbar-brand
+      img
+        width: 90px!important
+    .oca-menu
+      ul li a
+        font-size: 10px!important
+        padding: 16px!important

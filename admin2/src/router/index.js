@@ -1,23 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import VueBreadcrumbs from 'vue-2-breadcrumbs'
 
 import DashboardLayout from '@/modules/Layout/DashboardLayout.vue'
 
 import Dashboard from '@/pages/dashboard/index.vue'
-import News from '@/pages/news/index.vue'
+import Events from '@/pages/events/index.vue'
 import Websites from '@/pages/websites/index.vue'
 import Website from '@/pages/websites/website/index.vue'
 import Images from '@/pages/images/index.vue'
 import Locations from '@/pages/locations/index.vue'
-import Login from '@/pages/login/index.vue'
+import SignIn from '@/pages/signIn/index.vue'
 
+// website
 import WebHome from '@/pages/websites/website/home/index.vue'
 import TicketingPricing from '@/pages/websites/website/ticketing_pricing/index.vue'
 import Academy from '@/pages/websites/website/academy/index.vue'
 import Ocapass from '@/pages/websites/website/ocapass/index.vue'
 import Facilities from '@/pages/websites/website/facilities/index.vue'
-import EventsPromotions from '@/pages/websites/website/events_promotions/index.vue'
+import Promotions from '@/pages/websites/website/promotions/index.vue'
 import Contact from '@/pages/websites/website/contact/index.vue'
 
 // submenu academy
@@ -27,45 +27,42 @@ import PriceTable from '@/pages/websites/website/academy/price_table/index.vue'
 import RulesRegulations from '@/pages/websites/website/academy/rules_regulations/index.vue'
 import Sports from '@/pages/websites/website/academy/sports/index.vue'
 
+// DETAIL
+import EventComponent from '@/pages/event/index.vue'
+import EventDetail from '@/pages/event/detail.vue'
+
 // MENU CHILDRENS
 // Home
 import HomeSlideshow from '@/pages/websites/website/home/slideshow/index.vue'
 
 Vue.use(Router)
-Vue.use(VueBreadcrumbs)
 
 export default new Router({
   routes: [
     {
-      path: '/',
       component: DashboardLayout,
+      path: '/',
       children: [
         {
           path: '',
           name: 'dashboard',
-          component: Dashboard,
-          meta: {
-            breadcrumb: 'Dashboard'
-          }
+          component: Dashboard
         },
         {
-          path: '/websites/',
+          path: 'websites',
           name: 'websites',
-          component: Websites,
-          meta: {
-            breadcrumb: 'Web Pages'
-          }
+          component: Websites
         },
         {
           path: 'website',
           name: 'website',
+          redirect: {name: 'websites'},
           component: Website,
           children: [
             {
               path: 'web_home',
               name: 'web_home',
               component: WebHome,
-              breadcrumb: 'Home',
               children: [
                 {
                   path: 'slideshow',
@@ -77,8 +74,7 @@ export default new Router({
             {
               path: 'ticketing_pricing',
               name: 'ticketing_pricing',
-              component: TicketingPricing,
-              breadcrumb: 'Ticketing & Pricing'
+              component: TicketingPricing
             },
             {
               path: 'academy',
@@ -123,9 +119,9 @@ export default new Router({
               component: Facilities
             },
             {
-              path: '/events_promotions',
-              name: 'events_promotions',
-              component: EventsPromotions
+              path: '/promotions',
+              name: 'promotions',
+              component: Promotions
             },
             {
               path: '/contact',
@@ -135,24 +131,38 @@ export default new Router({
           ]
         },
         {
-          path: '/news',
-          name: 'news',
-          component: News
+          path: '/events',
+          name: 'events',
+          component: Events
         },
         {
-          path: '/images',
+          path: '/event/',
+          name: 'event',
+          redirect: {name: 'events'},
+          component: EventComponent,
+          children: [
+            {
+              path: ':id',
+              name: 'eventDetail',
+              component: EventDetail
+            }
+          ]
+        },
+        {
+          path: 'images',
           name: 'images',
           component: Images
         },
         {
-          path: '/locations',
+          path: 'locations',
           name: 'locations',
           component: Locations
         }
       ]
     },
     {
-      path: '/login', component: Login
+      path: '/sign-in',
+      component: SignIn
     }
   ]
 })

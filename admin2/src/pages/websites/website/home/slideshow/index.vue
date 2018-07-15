@@ -1,8 +1,7 @@
 <template>
   <div class="content">
     <div class="md-layout">
-      {{slides}} ssss
-      asdasdasd
+      {{slides}}
     </div>
   </div>
 </template>

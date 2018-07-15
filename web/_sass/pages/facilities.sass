@@ -11,6 +11,8 @@ $image-width: 500px
   #facilities-banner-content
     z-index: 0
     #facilities-banner-items
+      .arrow
+        transition: all ease-in-out .3s
       .main-image
         align-items: center
         position: absolute
@@ -27,6 +29,8 @@ $image-width: 500px
         right: 0
         bottom: 0
         top: 83px
+        .items-item-container
+          position: relative
         .mascot-items, .bubble-items
           .text
             color: white
@@ -46,11 +50,54 @@ $image-width: 500px
               transform: rotate(-60deg) scale(.8)
         .bubble-items
           position: absolute
+          &:hover, .active
+            .arrow
+              opacity: 0
+              transition: all ease-in-out .3s
+            .bubble-content
+              opacity: 1
+              right: -250px
+              transition: all ease-in-out .2s
+              &.left
+                left: -250px
+                right: 50%
+              span
+                opacity: 1
+                transition: all .2s ease-in-out .2s
+          .bubble-content
+              font-size: 11px
+              position: absolute
+              opacity: 0
+              background: $color-cerulean
+              color: white
+              top: 0
+              left: 50%
+              right: 0px
+              width: auto
+              height: 100%
+              display: flex
+              justify-content: center
+              align-items: center
+              padding-left: 85px
+              padding-right: 20px
+              z-index: 1
+              box-shadow: 4px 3px 10px -5px rgba(0,0,0,.5)
+              transition: all .2s ease-in-out .2s
+              &.left
+                right: 50%
+                left: 0px
+                padding-right: 85px
+                padding-left: 20px
+              span
+                opacity: 0
+                transition: all ease-in-out .2s
           .items-img
+            position: relative
+            z-index: 2
             width: 150px
             height: 150px
             background-position: center
-            background-size: contain
+            background-size: 110%
             background-repeat: no-repeat
             border-radius: 100%
             border-width: 3px
@@ -69,6 +116,7 @@ $image-width: 500px
               border-color: $color-disco
             &.orange
               border-color: $color-yellow-orange
+
   #facilities-banner-bg
     top: 0
     bottom: 0
@@ -123,10 +171,33 @@ $image-width: 500px
         height: 20px
 
 
+.mascot-container
+  position: absolute
+  left: calc(#{$bubble-left-benchmark} + 500px)
+  top: calc(#{$bubble-top-benchmark} + 515px)
+  width: 250px
+  height: 250px
+  &:hover
+    .mascot-content
+      transition: all ease-in-out .2s
+      opacity: 1
+  .mascot-content
+    font-size: 11px
+    position: absolute
+    color: white
+    padding: 40px
+    left: 0
+    width: 100%
+    height: 160px
+    background-color: $color-cerulean
+    opacity: 0
+    transition: all ease-in-out .4s
+    box-shadow: 4px 3px 10px -5px rgba(0,0,0, .5)
+
 .mascot-items
   &#mascot-1
-    left: calc(#{$bubble-left-benchmark} + 640px)
-    top: calc(#{$bubble-top-benchmark} + 515px)
+    // left: calc(#{$bubble-left-benchmark} + 640px)
+    // top: calc(#{$bubble-top-benchmark} + 515px)
     .mascot-img
       height: 220px
       width: 130px
@@ -137,8 +208,9 @@ $image-width: 500px
       top: 52px
       left: -60px
   &#mascot-2
-    left: calc(#{$bubble-left-benchmark} + 530px)
-    top: calc(#{$bubble-top-benchmark} + 515px)
+    left: calc(150px)
+    // left: calc(#{$bubble-left-benchmark} + 530px)
+    // top: calc(#{$bubble-top-benchmark} + 515px)
     .arrow
       top: 39px
       left: -18px
@@ -170,7 +242,7 @@ $image-width: 500px
       left: -60px
       top: 51px
     .text
-      bottom: -25px
+      bottom: -45px
   &#bubble-3
     left: calc(#{$bubble-left-benchmark} + #{$image-width} + 380px)
     top: calc(#{$bubble-top-benchmark} + 380px)
@@ -233,6 +305,14 @@ $image-width: 500px
     display: block
     background-color: #888
     margin-left: 50px
+  .facilities-food-image
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    img
+      width: 200px
+      margin-top: 20px
 .text-big
   font-size: 20px
   font-weight: 700

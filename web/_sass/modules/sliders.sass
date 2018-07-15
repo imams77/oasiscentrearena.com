@@ -64,7 +64,11 @@
         color: $color-button-primary
         font-family: 'Lato'
 
+#scrollAnchor
+  &.home
+    margin-top: 80px
 .slideshow-container
+  transition: all ease-in-out .4s
   .dots-container
     position: absolute
     bottom: 20px
@@ -78,4 +82,23 @@
           background-color: $color-cerulean
         button
           display: none
+  .navigation
+    position: absolute
+    height: 100%
+    width: 50px
+    +flex-box()
+    cursor: pointer
+    transition: all ease-in-out .2s
+    top: 0
+    color: white
+    z-index: 2
+    &:hover
+      background-color: rgba($color-button-primary, .6)
+      color: white
+    &.next
+      right: 0
+      left: auto
+    &.prev
+      right: auto
+      left: 0
   

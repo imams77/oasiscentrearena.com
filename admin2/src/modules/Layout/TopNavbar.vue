@@ -10,7 +10,6 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </md-button>
-
         <div class="md-collapse">
           <!-- <div class="md-autocomplete">
             <md-autocomplete class="search" v-model="selectedEmployee" :md-options="employees">
@@ -39,7 +38,7 @@
               </drop-down>
             </md-list-item> -->
 
-            <md-list-item to="/user">
+            <md-list-item @click="logout">
               <i class="material-icons">exit_to_app</i>
               <p class="hidden-lg hidden-md">Logout</p>
             </md-list-item>
@@ -48,15 +47,15 @@
       </div>
     </div>
     <div class="md-toolbar-row breadcrumbs-container">
-      <div class="breadcrumbs">
-        <breadcrumbs />
-      </div>
+      <!-- <div class="breadcrumbs"> -->
+      <breadcrumbs />
+      <!-- </div> -->
     </div>
   </md-toolbar>
 </template>
 
 <script>
-
+import store from '@/store'
 export default {
   data () {
     return {
@@ -76,6 +75,9 @@ export default {
   methods: {
     toggleSidebar () {
       this.$sidebar.displaySidebar(!this.$sidebar.showSidebar)
+    },
+    logout () {
+      store.dispatch('auth/logout')
     }
   }
 }
